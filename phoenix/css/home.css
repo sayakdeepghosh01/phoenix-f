@@ -1,0 +1,190 @@
+body {
+    min-height: 100vh;
+    min-width: 100vw;
+    background-image: url(../res/index/horror1.png);
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+}
+
+.app {
+    background-color: #000000aa;
+    min-width: 100%;
+    min-height: 100vh;
+}
+
+/* Navbar */
+nav.navbar {
+    padding: 24px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+.nav-left {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+.nav-image-link img {
+    width: 70px;
+}
+.xplorica-link img {
+    width: 85px;
+}
+.phoenix-link img {
+    width: 60px;
+}
+a.teamfuture-link.nav-image-link {
+    background: #000000;
+}
+.nav-middle {
+    display: flex;
+    gap: 2vw;
+}
+a.nav-link {
+    text-decoration: none;
+    color: #fff;
+    font-family: 'Kanit';
+    font-size: 24px;
+    text-transform: uppercase;
+}
+a.nav-link.active {
+    position: relative;
+}
+a.nav-link.active::after {
+    content: '';
+    position: absolute;
+    background: #fff;
+    height: 4px;
+    width: 69%;
+    border-radius: 2px 0 0 2px;
+    bottom: -10px;
+    right: 0;
+}
+a.nav-link:hover {
+    animation: glitch 0.3s 0.1s steps(100);
+    background: linear-gradient(359deg, #00000038, transparent);
+    backface-visibility: hidden;
+}
+
+
+/* Banner */
+main {
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    color: #fff;
+    margin-top: 20vh;
+}
+img.banner {
+    width: 50vw;
+}
+.title-container {
+    font-size: 6vw;
+    font-family: 'Mokoto';
+    width: 100%;
+}
+.main-elements {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+.subtitle-container {
+    width: 100%;
+    text-align: right;
+    font-size: 1.5vw;
+    font-family: 'Kanit';
+    padding: 15px 10px;
+    text-transform: capitalize;
+}
+
+.glitch-banner {
+    position: relative;
+    color: white;
+    animation: glitch-skew 1s infinite linear alternate-reverse;
+}
+.glitch-banner::before {
+    content: attr(data-text);
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    left: 2px;
+    text-shadow: -2px 0 #ff00c1;
+
+    clip: rect(44px, 450px, 56px, 0);
+    animation: glitch-anim 5s infinite linear alternate-reverse;
+}
+.glitch-banner::after {
+content: attr(data-text);
+position: absolute;
+top: 0;
+left: 0;
+width: 100%;
+height: 100%;
+left: -2px;
+text-shadow: -2px 0 #00fff9, 2px 2px #ff00c1;
+animation: glitch-anim2 1s infinite linear alternate-reverse;
+}
+
+.layers {
+    position: relative;
+}
+.layers::before,
+.layers::after {
+content: attr(data-text);
+position: absolute;
+width: 110%;
+z-index: -1;
+}
+
+.layers::before {
+top: 10px;
+left: 15px;
+color: #e0287d;
+}
+
+.layers::after {
+top: 5px;
+left: -10px;
+color: #1bc7fb;
+}
+
+.glitch span {
+    animation: paths 5s step-end infinite;
+}
+
+.glitch::before {
+animation: paths 5s step-end infinite, opacity 5s step-end infinite,
+    font 8s step-end infinite, movement 10s step-end infinite;
+}
+
+.glitch::after {
+animation: paths 5s step-end infinite, opacity 5s step-end infinite,
+    font 7s step-end infinite, movement 8s step-end infinite;
+}
+
+
+/* Footer */
+footer {
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    padding: 24px;
+    display: flex;
+    justify-content: space-between;
+}
+footer div {
+    display: flex;
+    gap: 20px;
+}
+
+/* Media  */
+
+@media screen and (max-width:800px){
+   .app, .title-container glitch-banner, .banner-container{
+        width: 100%;
+    }
+}

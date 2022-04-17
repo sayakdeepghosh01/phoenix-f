@@ -1,0 +1,20 @@
+@import url("https://fonts.googleapis.com/css2?family=Asap:wght@500;600&family=Kanit:wght@400;500;600&display=swap");
+@font-face {
+  font-family: Mokoto;
+  src: url("../res/fonts/mokoto/Mokoto\ Glitch\ Mark.otf") format("opentype");
+}
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+::-webkit-scrollbar {
+    width: 7px;
+    height: 7px;
+    background-color: #201919;
+}
+::-webkit-scrollbar-thumb {
+    background-color: #0a0909;
+    border-radius: 7px;
+}
